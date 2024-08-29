@@ -10,5 +10,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`cccvvvvvvvvvcccccccccccccca running at http://${hostname}:${port}/`);
+  console.log(`ccccccccccccca running at http://${hostname}:${port}/`);
 });
