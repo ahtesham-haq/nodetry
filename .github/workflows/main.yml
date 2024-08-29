@@ -110,9 +110,14 @@ jobs:
     - name: Install dependencies
       run: npm install
       working-directory: ./my-node-app
+      
+    - name: List directory contents
+      run: ls -R
 
     - name: ANother update
       run: npm version minor
+      working-directory: ./my-node-app
+      
     - name: Commit and push changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
