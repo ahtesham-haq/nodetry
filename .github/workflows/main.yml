@@ -118,7 +118,7 @@ jobs:
         # Check if there are changes to commit
         if [ -n "$(git status --porcelain)" ]; then
           # Add and commit changes
-          git add package.json
+          git add .
           git diff --cached --name-only  # Check what files are staged
           git commit -m "Incremented version to ${{ env.new_version }}"
           
