@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/setup-node@v4.0.3
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0  # Ensure the full history is fetched
 
@@ -52,7 +52,7 @@ jobs:
     - name: Increment version
       id: increment_version
       run: |
-        file="package.json"  # Path to your package.json file
+        file="my-node-app/package.json"  # Path to your package.json file
         
         # Extract current version
         current_version=$(jq -r '.version' $file)
