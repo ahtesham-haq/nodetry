@@ -52,7 +52,7 @@ jobs:
     - name: Increment version
       id: increment_version
       run: |
-        file="my-node-app/package.json"  # Path to your package.json file
+        file="package.json"  # Path to your package.json file
         
         # Extract current version
         current_version=$(jq -r '.version' $file)
