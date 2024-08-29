@@ -107,7 +107,8 @@ jobs:
 
         # Output the new version so it can be used in later steps
         echo "new_version=$new_version" >> $GITHUB_ENV
-
+    - name: ANother update
+      run: npm version minor
     - name: Commit and push changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
