@@ -107,6 +107,10 @@ jobs:
 
         # Output the new version so it can be used in later steps
         echo "new_version=$new_version" >> $GITHUB_ENV
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./my-node-app
+
     - name: ANother update
       run: npm version minor
     - name: Commit and push changes
